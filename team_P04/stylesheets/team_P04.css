@@ -1,0 +1,35 @@
+
+div {
+    width: 50px;
+    height: 100px;
+    background-color:rgba(178,33,33);
+    position: relative ;
+    animation: myrect 5s linear 2s infinite alternate;
+}
+
+@keyframes myrect {
+    0%   {transform: rotate(0deg);
+          background-color:rgba(178,33,33);
+          left:0px;
+          top:0px;}
+    25%  {transform: rotate(45deg);
+          background-color:rgba(89,33,33);
+          left:100px;
+          top:100px;
+          clip-path:polygon(0% 15%, 100% 15%, 100% 85%, 0% 85%);}
+    50%  {transform: rotate(90deg);
+          background-color:rgba(0,0,0);
+          left:200px;
+          top:0px;
+          clip-path:ellipse(45% 45% at 50% 50%);}
+    75%  {transform: rotate(135deg);
+          background-color:rgba(11,2,90);
+          left:100px;
+          top:100px;
+          clip-path:polygon(0% 15%, 100% 15%, 100% 85%, 0% 85%);}
+    100% {transform: rotate(180deg);
+          background-color:rgba(11,2,166);
+          left:0px;
+          top:0px;}
+}
+
